@@ -1,13 +1,187 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon -->
     <link rel="shortcut icon" href="https://i.postimg.cc/cJMT9NXx/Grand-Line-1.jpg" type="image/x-icon">
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <!-- custom css -->
     <link rel="stylesheet" href="../css/style.css">
-    <title>Router Description</title>
+    <title>GrandLine Vessels - Router Description</title>
 </head>
+
 <body>
-    
+    <main class="container text-white">
+        <div class="container">
+            <h2 class="m-5 text-center text-decoration-underline">Router Descriptions</h2>
+        </div>
+        <!-- Home router -->
+        <div class="container">
+            <h3 class="m-2"> Home</h3>
+        </div>
+
+        <div class="container">
+            <table class="table table-dark table-bordered text-center">
+                <thead>
+                    <tr>
+                        <th scope="col">HTTP Methods</th>
+                        <th scope="col">Paths</th>
+                        <th scope="col">Descriptions</th>
+                    </tr>
+                </thead>
+                <tbody class="table-group-divider">
+                    <tr>
+                        <th>GET</th>
+                        <td>/ or /router</td>
+                        <td>This router takes you to the Home Page of the API</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Users Router -->
+        <div class="container">
+            <h3 class="m-2"> Users</h3>
+        </div>
+
+        <div class="container">
+            <table class="table table-dark table-bordered text-center">
+                <thead>
+                    <tr>
+                        <th scope="col">HTTP Methods</th>
+                        <th scope="col">Paths</th>
+                        <th scope="col">Descriptions</th>
+                    </tr>
+                </thead>
+                <tbody class="table-group-divider">
+                    <tr>
+                        <th>GET</th>
+                        <td>/users</td>
+                        <td>This router shows all the users in the database</td>
+                    </tr>
+                    <tr>
+                        <th>GET</th>
+                        <td>/user/:id</td>
+                        <td>This router shows a single user when a user requests a ID</td>
+                    </tr>
+                    <tr>
+                        <th>POST</th>
+                        <td>/register</td>
+                        <td>This router allows us to register a new user into the database</td>
+                    </tr>
+                    <tr>
+                        <th>PATCH</th>
+                        <td>/user/:id</td>
+                        <td>This router allows us to update a users details in the database</td>
+                    </tr>
+                    <tr>
+                        <th>POST</th>
+                        <td>/user</td>
+                        <td>This router allows us to login to the website</td>
+                    </tr>
+                    <tr>
+                        <th>DELETE</th>
+                        <td>/user/:id</td>
+                        <td>This router allows us delete user and their details in the database</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!-- Items router  -->
+        <div class="container">
+            <h3 class="m-2"> Items</h3>
+        </div>
+
+        <div class="container">
+            <table class="table table-dark table-bordered text-center">
+                <thead>
+                    <tr>
+                        <th scope="col">HTTP Methods</th>
+                        <th scope="col">Paths</th>
+                        <th scope="col">Descriptions</th>
+                    </tr>
+                </thead>
+                <tbody class="table-group-divider">
+                    <tr>
+                        <th>GET</th>
+                        <td>/items</td>
+                        <td>This router shows all the items in the database</td>
+                    </tr>
+                    <tr>
+                        <th>GET</th>
+                        <td>/item/:id</td>
+                        <td>This router shows a single item when a user requests the item by ID</td>
+                    </tr>
+                    <tr>
+                        <th>POST</th>
+                        <td>/items</td>
+                        <td>This router allows us to add a new item into the database</td>
+                    </tr>
+                    <tr>
+                        <th>PACTH</th>
+                        <td>/item/:id</td>
+                        <td>This router is used to update a item and its details on the database</td>
+                    </tr>
+                    <tr>
+                        <th>DELETE</th>
+                        <td>/item/:id</td>
+                        <td>This router is used to delete a item from the database</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!-- Cart router  -->
+        <div class="container">
+            <h3 class="m-2"> Cart</h3>
+        </div>
+
+        <div class="container pb-3">
+            <table class="table table-dark table-bordered text-center">
+                <thead>
+                    <tr>
+                        <th scope="col">HTTP Methods</th>
+                        <th scope="col">Paths</th>
+                        <th scope="col">Descriptions</th>
+                    </tr>
+                </thead>
+                <tbody class="table-group-divider">
+                    <tr>
+                        <th>GET</th>
+                        <td>/user/:id/carts</td>
+                        <td>This router shows all the items in the cart</td>
+                    </tr>
+                    <tr>
+                        <th>POST</th>
+                        <td>/user/:id/cart</td>
+                        <td>This router allows us to add a new items into the cart</td>
+                    </tr>
+                    <tr>
+                        <th>PACTH</th>
+                        <td>/user/:id/cart/:id</td>
+                        <td>This router is used to update an item from the cart</td>
+                    </tr>
+                    <tr>
+                        <th>DELETE</th>
+                        <td>/user/:id/cart</td>
+                        <td>This router is used to delete all items from the cart</td>
+                    </tr>
+                    <tr>
+                        <th>DELETE</th>
+                        <td>/user/:id/cart/:id</td>
+                        <td>This router is used to delete a single item from the cart</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+    <!-- bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>

@@ -2,9 +2,9 @@
   <div>
     <div class="background-image"></div>
     <nav
-      class="navbar navbar-expand-lg  border-bottom navbarcolor"
+      class="navbar navbar-expand-lg border-bottom border-dark p-0"  
     >
-      <div class="container-fluid">
+      <div class="container-fluid p-1">
         <router-link class="navbar-brand" to="/">
           <img
             src="https://i.postimg.cc/qMdd8W2H/Grand-Line-1.gif"
@@ -26,26 +26,26 @@
         <div class="collapse navbar-collapse " id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item ">
-              <router-link class="nav-link text-white" aria-current="page" to="/"
+              <router-link class="nav-link" aria-current="page" to="/"
                 >Home</router-link
               >
             </li>
             <li class="nav-item">
-              <router-link class="nav-link text-white" to="/product">Product</router-link>
+              <router-link class="nav-link" to="/product">Product</router-link>
             </li>
             <li class="nav-item">
-              <router-link class="nav-link text-white" to="/about">About</router-link>
+              <router-link class="nav-link" to="/about">About</router-link>
             </li>
             <li class="nav-item">
-              <router-link class="nav-link text-white" to="/contact">Contact</router-link>
+              <router-link class="nav-link" to="/contact">Contact</router-link>
             </li>
           </ul>
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <router-link class="nav-link text-white" to="/cart">Cart</router-link>
+              <router-link class="nav-link" to="/cart">Cart</router-link>
             </li>
             <li class="nav-item">
-              <router-link class="nav-link text-white" to="/profile">Profile</router-link>
+              <router-link class="nav-link" to="/profile">Profile</router-link>
             </li>
           </ul>
         </div>

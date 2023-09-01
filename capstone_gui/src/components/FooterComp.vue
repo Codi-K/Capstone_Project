@@ -1,5 +1,5 @@
 <template>
-  <div class="container-fluid footer">
+  <div class="footer p-1 border border-dark">
     <div class="d-flex justify-content-center gap-2 my-1">
         <!-- Facebook -->
       <a href="https://www.facebook.com/" target="_blank">

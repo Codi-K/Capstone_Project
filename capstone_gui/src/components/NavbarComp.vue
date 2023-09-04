@@ -31,13 +31,16 @@
               >
             </li>
             <li class="nav-item">
-              <router-link class="nav-link text-dark" to="/product">Product</router-link>
+              <router-link class="nav-link text-dark" to="/product">Boats</router-link>
             </li>
             <li class="nav-item">
-              <router-link class="nav-link text-dark" to="/about">About</router-link>
+              <router-link class="nav-link text-dark" to="/about">Our Story</router-link>
             </li>
             <li class="nav-item">
-              <router-link class="nav-link text-dark" to="/contact">Contact</router-link>
+              <router-link class="nav-link text-dark" to="/contact">Support</router-link>
+            </li>
+            <li class="nav-item">
+              <router-link class="nav-link text-dark" to="/contact">Admin</router-link>
             </li>
           </ul>
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0">

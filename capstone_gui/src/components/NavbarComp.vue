@@ -8,7 +8,7 @@
         <router-link class="navbar-brand" to="/">
           <img
             src="https://i.postimg.cc/qMdd8W2H/Grand-Line-1.gif"
-            class="img-fluid logo"
+            class="img-fluid logo1"
             alt="Logo"
           />
         </router-link>
@@ -37,7 +37,7 @@
               <router-link class="nav-link text-dark" to="/about">Our Story</router-link>
             </li>
             <li class="nav-item">
-              <router-link class="nav-link text-dark" to="/contact">Support</router-link>
+              <router-link class="nav-link text-dark" to="/support">Support</router-link>
             </li>
             <li class="nav-item">
               <router-link class="nav-link text-dark" to="/contact">Admin</router-link>

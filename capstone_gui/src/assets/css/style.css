@@ -20,12 +20,25 @@
    display: none;
 }
 
-.logo{
+.logo1{
   width: 4rem;
 }
 
-.pushingdown{
-  margin-top: 20rem;
+.video{
+  position: relative;
+  background: url("https://www.tiarayachts.com/media/wysiwyg/new-home/video-preview.jpg") no-repeat;
+  background-size: cover;
+}
+
+.video-heading{
+   position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.logo{
+  width: 10rem;
 }
 
 .footerI{
@@ -33,7 +46,7 @@
 }
 
 
-.home{
+.support{
   background-image: url('https://i.postimg.cc/kX5vhgQQ/aerial-view-person-with-jetski.jpg');
   background-size: cover;
   background-position: center;

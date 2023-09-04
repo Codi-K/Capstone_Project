@@ -26,26 +26,26 @@
         <div class="collapse navbar-collapse " id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item ">
-              <router-link class="nav-link" aria-current="page" to="/"
+              <router-link class="nav-link text-dark" aria-current="page" to="/"
                 >Home</router-link
               >
             </li>
             <li class="nav-item">
-              <router-link class="nav-link" to="/product">Product</router-link>
+              <router-link class="nav-link text-dark" to="/product">Product</router-link>
             </li>
             <li class="nav-item">
-              <router-link class="nav-link" to="/about">About</router-link>
+              <router-link class="nav-link text-dark" to="/about">About</router-link>
             </li>
             <li class="nav-item">
-              <router-link class="nav-link" to="/contact">Contact</router-link>
+              <router-link class="nav-link text-dark" to="/contact">Contact</router-link>
             </li>
           </ul>
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <router-link class="nav-link" to="/cart">Cart</router-link>
+              <router-link class="nav-link text-dark" to="/cart">Cart</router-link>
             </li>
             <li class="nav-item">
-              <router-link class="nav-link" to="/profile">Profile</router-link>
+              <router-link class="nav-link text-dark" to="/profile">Profile</router-link>
             </li>
           </ul>
         </div>

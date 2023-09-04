@@ -57,7 +57,7 @@ class Orders {
   //   db.query(query, (err) => {
   //     if (err) throw err;
   //     res.json({
-  //       status: res.statusCode,
+  //       status: res.statusCode,  
   //       msg: "item date updated successfully",
   //     });
   //   });

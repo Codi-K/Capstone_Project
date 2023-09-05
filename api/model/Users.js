@@ -54,7 +54,6 @@ class Users {
             emailAdd,
             userPass,
           });
-          req.header["Authorization"] = token;
           if (cResult) {
             res.json({
               msg: "Logged in",

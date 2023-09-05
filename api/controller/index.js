@@ -35,11 +35,11 @@ routes.post("/user", bodyParser.json(), (req, res) => {
 
 //================== Boats Router ==================
 
-routes.get("/items", (req, res) => {
+routes.get("/items",  verifyAToken, (req, res) => {
   boats.fetchBoats(req, res);
 });
 
-routes.get("/item/:id", verifyAToken ,(req, res) => {
+routes.get("/item/:id", (req, res) => {
   boats.fetchBoat(req, res);
 });
 

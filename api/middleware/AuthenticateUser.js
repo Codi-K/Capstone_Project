@@ -19,10 +19,12 @@ function verifyAToken(req, res, next) {
   try {
     
     const token = req.header["Authorization"];
-    console.log(req.header["Authorization"]);
+    console.log(token);
     const decoded = verify(token, process.env.SECRET_KEY)
-    req.user = decoded
-    next();
+    if (decoded) {
+      next();
+    }
+    
   } catch (e) {
     res.json({
       status: res.statusCode,

@@ -55,7 +55,7 @@
       </p>
     </div>
 
-    <div class="d-flex justify-content-center gap-5">
+    <div class="d-flex justify-content-center gap-5 ">
       <!-- Mission -->
       <div class="card border-dark" style="width: 18rem">
         <img

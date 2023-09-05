@@ -1,6 +1,5 @@
 <template>
   <div>
-    <div class="background-image"></div>
     <nav
       class="navbar navbar-expand-lg border-bottom border-dark p-0"  
     >
@@ -31,16 +30,16 @@
               >
             </li>
             <li class="nav-item">
-              <router-link class="nav-link text-dark" to="/product">Boats</router-link>
+              <router-link class="nav-link text-dark" to="/boats">Boats</router-link>
             </li>
             <li class="nav-item">
-              <router-link class="nav-link text-dark" to="/about">Our Story</router-link>
+              <router-link class="nav-link text-dark" to="/OurStory">Our Story</router-link>
             </li>
             <li class="nav-item">
               <router-link class="nav-link text-dark" to="/support">Support</router-link>
             </li>
             <li class="nav-item">
-              <router-link class="nav-link text-dark" to="/contact">Admin</router-link>
+              <router-link class="nav-link text-dark" to="/admin">Admin</router-link>
             </li>
           </ul>
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0">

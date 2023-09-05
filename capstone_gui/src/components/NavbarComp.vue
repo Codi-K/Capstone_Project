@@ -39,7 +39,7 @@
               <router-link class="nav-link text-dark" to="/support">Support</router-link>
             </li>
             <li class="nav-item">
-              <router-link class="nav-link text-dark" to="/admin">Admin</router-link>
+              <router-link class="nav-link text-dark" to="/admin" v-show="isAdmin">Admin</router-link>
             </li>
           </ul>
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
@@ -57,7 +57,22 @@
 </template>
 
 <script>
-export default {};
+import { useCookies } from "vue3-cookies";
+const {cookies} = useCookies();
+export default {
+  computed: {
+    user() {
+      return this.$store.state.user ||
+      cookies.get('ActualUser')
+    },
+    result() {
+      return this.user?.result
+    },
+    isAdmin() {
+      return this.result?.userRole?.toLowerCase() === "admin"
+    }
+  }
+};
 </script>
 
 <style scoped></style>

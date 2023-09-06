@@ -1,6 +1,7 @@
 <template>
     <div>
-
+        <div class="boats"></div>
+        
     </div>
 </template>
 

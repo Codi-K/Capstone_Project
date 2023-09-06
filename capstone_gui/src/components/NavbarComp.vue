@@ -67,19 +67,17 @@ export default {
     user() {
        const user = this.$store.state.user ||
         cookies.get('ActualUser')
-        console.log("User:", user);
       return user
     },
     result() {
       const result = this.user?.result
-      console.log("Result:", result);
       return result
     },
     isAdmin() {
       return this.result?.userRole?.toLowerCase() === "admin"
     },
     userAdmin() {
-      return this.result?.userRole?.toLowerCase() === "user"
+      return this.result?.userRole?.toLowerCase() === "user","admin"
     },
   },
   methods: {

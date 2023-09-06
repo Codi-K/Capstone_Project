@@ -10,7 +10,7 @@ const routes = [
     component: HomeView,
     beforeEnter() {
       if (!cookies.get('ActualUser')) {
-        router.push({ name: 'register' })
+        router.push({ name: 'login' })
       }
     },
   },

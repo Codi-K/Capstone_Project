@@ -47,7 +47,10 @@
               <router-link class="nav-link text-dark" to="/cart">Cart</router-link>
             </li>
             <li class="nav-item">
-              <router-link class="nav-link text-dark" to="/profile">Profile</router-link>
+              <router-link class="nav-link text-dark" to="/profile" v-show="userAdmin">Profile</router-link>
+            </li>
+            <li class="nav-item">
+              <router-link class="nav-link text-dark" @click="logOut" to="/login">Logout</router-link>
             </li>
           </ul>
         </div>
@@ -62,17 +65,30 @@ const {cookies} = useCookies();
 export default {
   computed: {
     user() {
-      return this.$store.state.user ||
-      cookies.get('ActualUser')
+       const user = this.$store.state.user ||
+        cookies.get('ActualUser')
+        console.log("User:", user);
+      return user
     },
     result() {
-      return this.user?.result
+      const result = this.user?.result
+      console.log("Result:", result);
+      return result
     },
     isAdmin() {
       return this.result?.userRole?.toLowerCase() === "admin"
+    },
+    userAdmin() {
+      return this.result?.userRole?.toLowerCase() === "user"
+    },
+  },
+  methods: {
+    logOut() {
+      this.$store.dispatch("logOut")
     }
   }
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+</style>

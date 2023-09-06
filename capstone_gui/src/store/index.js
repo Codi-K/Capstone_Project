@@ -3,10 +3,10 @@ import axios from "axios";
 import sweet from "sweetalert";
 import router from "@/router";
 import { useCookies } from "vue3-cookies";
-const cookies = useCookies();
+const { cookies } = useCookies();
 import authenticate from "@/services/AuthenicateUser";
 
-const dataUrl = 'https://capstone-api-zblc.onrender.com/'
+const dataUrl = "https://capstone-api-zblc.onrender.com/";
 
 export default createStore({
   state: {
@@ -66,7 +66,7 @@ export default createStore({
             title: msg,
             text: `Welcome back ${result?.firstName} ${result?.lastName}`,
             icon: "success",
-            timer: 2000,
+            timer: 4000,
           });
           router.push({ name: "home" });
         } else {
@@ -74,7 +74,7 @@ export default createStore({
             title: "Error",
             text: msg,
             icon: "error",
-            timer: 2000,
+            timer: 4000,
           });
         }
       } catch (e) {
@@ -90,7 +90,7 @@ export default createStore({
             title: "Registration",
             text: msg,
             icon: "success",
-            timer: 2000,
+            timer: 4000,
           });
           context.dispatch("fetchUsers");
           router.push({ name: "login" });
@@ -99,13 +99,18 @@ export default createStore({
             title: "Error",
             text: msg,
             icon: "error",
-            timer: 2000,
+            timer: 4000
           });
         }
       } catch (e) {
         context.commit("setMsg", "An error has occured");
       }
     },
+    // logout
+    async logOut(context) {
+      context.commit("setUser")
+      cookies.remove("ActualUser")
+    }
   },
   modules: {},
 });

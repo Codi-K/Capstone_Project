@@ -101,8 +101,7 @@ export default {
     register() {
       this.$store.dispatch('addUser', this.payload)
     }
-  }
-        
+  }   
     }
 </script>
 

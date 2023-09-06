@@ -1,6 +1,6 @@
 <template>
   <div>
-    <form @submit.prevent="login">
+    <form>
       <div class="mb-3">
         <label for="exampleInputEmail1" class="form-label">Email address</label>
         <input
@@ -22,14 +22,16 @@
           required
         />
       </div>
-      <button type="submit" class="btn btn-primary">Login</button>
+      <button @click.prevent="login" type="button" class="btn btn-primary">
+        Login
+      </button>
     </form>
   </div>
 </template>
 
 <script>
 import { useCookies } from "vue3-cookies";
-const {cookies} = useCookies();
+const { cookies } = useCookies();
 
 export default {
   data() {
@@ -44,18 +46,18 @@ export default {
     user() {
       return this.$store.state.user;
     },
+  },
+  methods: {
+    login() {
+      this.$store.dispatch("login", this.payload);
     },
-    methods: {
-        login() {
-            this.$store.dispatch('login', this.payload)
-        }
-    },
-    beforeCreate() {
-        this.$store.dispatch('fetchUsers')
-    },
-    mounted() {
-        console.log(cookies.get('ActualUser'));
-    }
+  },
+  beforeCreate() {
+    this.$store.dispatch("fetchUsers");
+  },
+  mounted() {
+    console.log(cookies.get("ActualUser"));
+  },
 };
 </script>
 

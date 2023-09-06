@@ -35,7 +35,7 @@ class Users {
     const { emailAdd, userPass } = req.body;
     // query
     const query = `
-        SELECT firstName, lastName, emailAdd, userPass, userProfile
+        SELECT firstName, lastName, emailAdd, userRole, userPass, userProfile
         FROM Users
         WHERE emailAdd = '${emailAdd}';
         `;

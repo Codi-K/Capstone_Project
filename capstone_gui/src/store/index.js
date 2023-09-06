@@ -42,7 +42,6 @@ export default createStore({
     },
   },
   actions: {
-    //users
     // users
     async fetchUsers(context) {
       try {

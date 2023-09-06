@@ -30,8 +30,6 @@
 </template>
 
 <script>
-import { useCookies } from "vue3-cookies";
-const { cookies } = useCookies();
 
 export default {
   data() {
@@ -54,10 +52,7 @@ export default {
   },
   beforeCreate() {
     this.$store.dispatch("fetchUsers");
-  },
-  mounted() {
-    console.log(cookies.get("ActualUser"));
-  },
+  }
 };
 </script>
 

@@ -35,7 +35,7 @@ routes.post("/user", bodyParser.json(), (req, res) => {
 
 //================== Boats Router ==================
 
-routes.get("/items",  verifyAToken, (req, res) => {
+routes.get("/items", (req, res) => {
   boats.fetchBoats(req, res);
 });
 

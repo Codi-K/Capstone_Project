@@ -109,6 +109,15 @@ export default createStore({
     async logOut(context) {
       context.commit("setUser")
       cookies.remove("ActualUser")
+    },
+    //boats
+    async fetchBoats(context) {
+        try {
+        const { data } = (await axios.get(`${dataUrl}items`));
+        context.commit("setBoats", data.results);
+      } catch (e) {
+        context.commit("setMsg", "An error has occurred");
+      }
     }
   },
   modules: {},

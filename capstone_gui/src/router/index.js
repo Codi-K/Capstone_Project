@@ -9,8 +9,8 @@ const routes = [
     name: "home",
     component: HomeView,
     beforeEnter() {
-      if (!cookies.get('ActualUser')) {
-        router.push({ name: 'login' })
+      if (!cookies.get("ActualUser")) {
+        router.push({ name: "login" });
       }
     },
   },
@@ -18,6 +18,11 @@ const routes = [
     path: "/OurStory",
     name: "OurStory",
     component: () => import("../views/OurStoryView.vue"),
+    beforeEnter() {
+      if (!cookies.get("ActualUser")) {
+        router.push({ name: "login" });
+      }
+    },
   },
   {
     path: "/support",
@@ -28,6 +33,11 @@ const routes = [
     path: "/boats",
     name: "boats",
     component: () => import("../views/BoatsView.vue"),
+    beforeEnter() {
+      if (!cookies.get("ActualUser")) {
+        router.push({ name: "login" });
+      }
+    },
   },
   {
     path: "/admin",
@@ -38,6 +48,11 @@ const routes = [
     path: "/cart",
     name: "cart",
     component: () => import("../views/CartView.vue"),
+    beforeEnter() {
+      if (!cookies.get("ActualUser")) {
+        router.push({ name: "login" });
+      }
+    },
   },
   {
     path: "/profile",

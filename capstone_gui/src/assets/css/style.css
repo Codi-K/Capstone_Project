@@ -20,16 +20,19 @@
    display: none;
 }
 
+/* Nav bar Logo */
 .logo1{
   width: 4rem;
 }
 
+/* bacground image for video */
 .video{
   position: relative;
   background: url("https://www.tiarayachts.com/media/wysiwyg/new-home/video-preview.jpg") no-repeat;
   background-size: cover;
 }
 
+/* Heading on Home Page  */
 .video-heading{
    position: absolute;
     top: 50%;
@@ -37,14 +40,17 @@
     transform: translate(-50%, -50%);
 }
 
+/* logos on Our Story page  */
 .logo{
   width: 10rem;
 }
 
+/* footer icons */
 .footerI{
   width: 1.9rem;
 }
 
+/* Background Images for different pages  */
 
 .support{
   background-image: url('https://www.nitro.com/content/dam/wrmg/nitro/2023/z-series-boats/z20-pro/lifestyle/23_N_Z20_hero4.jpg');
@@ -114,7 +120,7 @@
 
 #form_heading {
   padding: 0.5rem;
-  color: #ffc851;
+  color: #000000;
 }
 
 #form_submit_button {
@@ -127,3 +133,13 @@
   padding: 1rem;
 }
 
+/* Admin Page */
+
+.users_cards_images {
+  height: 8rem;
+}
+
+.watches_cards_images {
+  border-radius: 0rem;
+  height: 6rem;
+}

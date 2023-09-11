@@ -1,8 +1,8 @@
 <template>
   <div>
     <div class="boats">
-      <div class="row">
-        <div class="col">
+      <div class="d-flex justify-content-center gap-3">
+        <div class="">
           <div class="card"  v-for="boat in boats" style="width: 18rem" :key="boat.boatID">
             <img :src="boat.boatUrl" class="card-img-top" :alt="boat.boatName" />
             <div class="card-body">
@@ -11,12 +11,9 @@
                 R{{ boat.amount}}
               </h6>
               <p class="card-text">
-                {{ boat.boatDesc }}
-              </p>
-              <p class="card-text">
                 {{ boat.Category }}
               </p>
-              <router-link to="/" class="btn btn-primary">View More</router-link>
+              <router-link  :to="{name:'single', params:{boatID: boat.boatID}}" class="btn btn-primary">View More</router-link>
             </div>
           </div>
         </div>

@@ -16,6 +16,7 @@ export default createStore({
     boat: null,
     orders: null,
     spinner: null,
+    msg: null,
   },
   getters: {},
   mutations: {
@@ -26,6 +27,11 @@ export default createStore({
     // delete button boats
     deleteBoat(state, boatID) {
       state.boats = state.boats.filter((boat) => boat.boatID !== boatID);
+    },
+    // add user
+    // add watch
+    addBoats(state, newBoats) {
+      state.boats.push(newBoats);
     },
     setUsers(state, users) {
       state.users = users;
@@ -82,7 +88,7 @@ export default createStore({
         context.commit("setMsg", "An error has occured");
       }
     },
-    //register
+    //register (Add User)
     async addUser(context, payload) {
       try {
         const { msg } = (await axios.post(`${dataUrl}register`, payload)).data;
@@ -146,15 +152,17 @@ export default createStore({
           `${dataUrl}item/${editedBoat.boatID}`,
           editedBoat
         );
+        context.dispatch("fetchBoats");
         const { msg } = await data;
         if (msg) {
           context.commit("setMsg", msg);
+          
         }
       } catch (e) {
         context.commit("setMsg", "An error has occurred");
       }
     },
-    //edit boats
+    //edit User
     async editUsers(context, editedUser) {
       try {
         const { data } = await axios.patch(
@@ -165,6 +173,41 @@ export default createStore({
         if (msg) {
           context.commit("setMsg", msg);
         }
+        context.dispatch("fetchUsers");
+      } catch (e) {
+        context.commit("setMsg", "An error has occurred");
+      }
+    },
+    // add Boat
+    async addBoats(context, payload) {
+      try {
+        const { msg } = (await axios.post(`${dataUrl}items`, payload)).data;
+        if (msg) {
+          sweet({
+            title: "Boat",
+            text: msg,
+            icon: "success",
+            timer: 4000,
+          });
+          context.dispatch("fetchBoats");
+        } else {
+          sweet({
+            title: "Error",
+            text: msg,
+            icon: "error",
+            timer: 4000,
+          });
+        }
+      } catch (e) {
+        context.commit("setMsg", "An error has occured");
+      }
+    },
+    //single boat
+    async fetchBoat(context, boatID) {
+      try {
+        const { data } = await axios.get(`${dataUrl}item/${boatID}`);
+        context.commit("setBoat", data.result);
+        context.dispatch("fetchBoats");
       } catch (e) {
         context.commit("setMsg", "An error has occurred");
       }

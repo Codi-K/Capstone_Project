@@ -69,6 +69,12 @@ const routes = [
     name: "register",
     component: () => import("../views/RegisterView.vue"),
   },
+  {
+    path: "/single",
+    name: "single",
+    props: true,
+    component: () => import("../views/SingleProductView.vue"),
+  },
 ];
 
 const router = createRouter({

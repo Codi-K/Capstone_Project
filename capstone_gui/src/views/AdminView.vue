@@ -7,6 +7,10 @@
 
     <h1><b>Our Boats</b></h1>
 
+    <div class="container d-flex justify-content-center my-3">
+      <AddBoatComp/>
+    </div>
+
     <!-- table for watches-->
     <div v-if="boats" class="container-fluid">
       <table class="table table-bordered border-dark" >
@@ -100,12 +104,14 @@
 import SpinnerComp from "@/components/SpinnerComp.vue"; 
 import EditBoatComp from '@/components/EditBoatsComp.vue';
 import EditUserComp from "@/components/EditUserComp.vue";
+import AddBoatComp from '@/components/AddBoatComp.vue'
 
 export default {
   components: {
     SpinnerComp,
     EditBoatComp,
-    EditUserComp
+    EditUserComp,
+    AddBoatComp
   },
   computed: {
     boats() {

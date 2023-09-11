@@ -107,7 +107,7 @@ class Users {
         SET ?
         WHERE userID = ?;
         `;
-    db.query(query, [data], (err) => {
+    db.query(query, [data,req.params.id], (err) => {
       if (err) throw err;
       res.json({
         status: res.statusCode,

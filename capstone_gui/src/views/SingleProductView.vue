@@ -8,6 +8,11 @@
                 <h4 >R{{ boat.amount }}</h4>
                 <p>{{ boat.boatDesc }}</p>
             </div>
+            <div>
+                <button class="btn btn-outline-dark">
+                    Add to cart
+                </button>
+            </div>
         </div>
     </div>
 </template>

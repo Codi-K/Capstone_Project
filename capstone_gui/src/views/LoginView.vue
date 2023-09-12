@@ -22,7 +22,7 @@
           required
         />
       </div>
-      <button @click.prevent="login" type="button" class="btn btn-primary">
+      <button @click.prevent="login" type="button" class="btn btn-outline-dark">
         Login
       </button>
     </form>

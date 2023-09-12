@@ -17,8 +17,16 @@ export default createStore({
     orders: null,
     spinner: null,
     msg: null,
+    cart: [],
   },
-  getters: {},
+  getters: {
+    getTotal(state) {
+  return state.cart.reduce((total, item)=>{
+  const sumofItems = item.amount || 0;
+    return total + sumofItems
+      },0)
+    }
+  },
   mutations: {
     // delete button users
     deleteUser(state, userID) {
@@ -29,7 +37,6 @@ export default createStore({
       state.boats = state.boats.filter((boat) => boat.boatID !== boatID);
     },
     // add user
-    // add watch
     addBoats(state, newBoats) {
       state.boats.push(newBoats);
     },
@@ -48,6 +55,13 @@ export default createStore({
     setMsg(state, msg) {
       state.msg = msg;
     },
+    addToCart(state, boat) {
+      state.cart.push(boat);
+      localStorage.setItem("cart", JSON.stringify(state.cart))
+    },
+    setCart(state, boat) {
+      state.cart = boat 
+    }
   },
   actions: {
     // users
@@ -212,6 +226,19 @@ export default createStore({
         context.commit("setMsg", "An error has occurred");
       }
     },
+    //add cart
+    addCart(context, boat) {
+      context.commit("addToCart", boat)
+    },
+    //fetch cart
+    async fetchCart(context) {
+      try {
+        const cartdata = JSON.parse(localStorage.getItem("cart"));
+        this.$store.commit("setCart", cartdata);
+      } catch (e) {
+        context.commit("setMsg", "Error has ocurred")
+      }
+    }
   },
   modules: {},
 });

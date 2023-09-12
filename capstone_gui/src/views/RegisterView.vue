@@ -77,7 +77,7 @@
           required
         />
       </div>
-      <button type="submit" class="btn btn-primary">Register</button>
+      <button type="submit" class="btn btn-outline-dark">Register</button>
     </form>
   </div>
 </template>

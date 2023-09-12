@@ -9,7 +9,7 @@
                 <p>{{ boat.boatDesc }}</p>
             </div>
             <div>
-                <button class="btn btn-outline-dark">
+                <button class="btn btn-outline-dark" @click.prevent="AddtoCart(boat)">
                     Add to cart
                 </button>
             </div>
@@ -28,6 +28,11 @@ export default {
           return this.$store.state.boats;
           },   
     },
+    methods: {
+        AddtoCart(boat) {
+            this.$store.dispatch('addCart', boat)
+        }
+    }
 
     }
 </script>

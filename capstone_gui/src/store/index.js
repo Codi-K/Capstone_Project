@@ -21,11 +21,11 @@ export default createStore({
   },
   getters: {
     getTotal(state) {
-  return state.cart.reduce((total, item)=>{
-  const sumofItems = item.amount || 0;
-    return total + sumofItems
-      },0)
-    }
+      return state.cart.reduce((total, item) => {
+        const sumofItems = item.amount || 0;
+        return total + sumofItems;
+      }, 0);
+    },
   },
   mutations: {
     // delete button users
@@ -57,11 +57,11 @@ export default createStore({
     },
     addToCart(state, boat) {
       state.cart.push(boat);
-      localStorage.setItem("cart", JSON.stringify(state.cart))
+      localStorage.setItem("cart", JSON.stringify(state.cart));
     },
     setCart(state, boat) {
-      state.cart = boat 
-    }
+      state.cart = boat;
+    },
   },
   actions: {
     // users
@@ -79,6 +79,7 @@ export default createStore({
         const { msg, token, result } = (
           await axios.post(`${dataUrl}user`, payload)
         ).data;
+        console.log(msg, token, result);
         if (result) {
           context.commit("setUser", { result, msg });
           cookies.set("ActualUser", { msg, token, result });
@@ -102,7 +103,7 @@ export default createStore({
         context.commit("setMsg", "An error has occured");
       }
     },
-    //register (Add User)
+    //register 
     async addUser(context, payload) {
       try {
         const { msg } = (await axios.post(`${dataUrl}register`, payload)).data;
@@ -127,10 +128,41 @@ export default createStore({
         context.commit("setMsg", "An error has occured");
       }
     },
+    //register (add user)
+    async addUsers(context, payload) {
+      try {
+        const { msg } = (await axios.post(`${dataUrl}register`, payload)).data;
+        if (msg) {
+          sweet({
+            title: "New user",
+            text: msg,
+            icon: "success",
+            timer: 4000,
+          });
+          context.dispatch("fetchUsers");
+        } else {
+          sweet({
+            title: "Error",
+            text: msg,
+            icon: "error",
+            timer: 4000,
+          });
+        }
+      } catch (e) {
+        context.commit("setMsg", "An error has occured");
+      }
+    },
     // logout
     async logOut(context) {
       context.commit("setUser");
       cookies.remove("ActualUser");
+      localStorage.removeItem("cart");
+      sweet({
+        title: "Logged Out",
+        text: "You have been Logged Out",
+        icon: "success",
+        timer: 4000,
+      });
     },
     //boats
     async fetchBoats(context) {
@@ -144,8 +176,18 @@ export default createStore({
     //delete user
     async deleteUsers(context, userID) {
       try {
-        await axios.delete(`${dataUrl}user/${userID}`);
+        const { data } = await axios.delete(`${dataUrl}user/${userID}`);
         context.commit("deleteUser", userID);
+        const { msg } = await data;
+        if (msg) {
+          context.commit("setMsg", msg);
+          sweet({
+            title: "Deleted",
+            text: msg,
+            icon: "success",
+            timer: 4000,
+          });
+        }
       } catch (e) {
         context.commit("setMsg", "An error has occurred");
       }
@@ -153,8 +195,18 @@ export default createStore({
     //delete boats
     async deleteBoats(context, boatID) {
       try {
-        await axios.delete(`${dataUrl}item/${boatID}`);
+        const { data } = await axios.delete(`${dataUrl}item/${boatID}`);
         context.commit("deleteBoat", boatID);
+        const { msg } = await data;
+        if (msg) {
+          context.commit("setMsg", msg);
+          sweet({
+            title: "Deleted",
+            text: msg,
+            icon: "success",
+            timer: 4000,
+          });
+        }
       } catch (e) {
         context.commit("setMsg", "An error has occurred");
       }
@@ -167,22 +219,24 @@ export default createStore({
           editedBoat
         );
         const { msg } = await data;
-       if (msg) {
-         context.commit("setMsg", msg);
-         sweet({
-           title: "Update",
-           text: msg,
-           icon: "success",
-           timer: 5000,
-         });
-       } else {
-         sweet({
-           title: "Error",
-           text: msg,
-           icon: "error",
-           timer: 5000,
-         });
-       }
+        if (msg) {
+          context.commit("setMsg", msg);
+          sweet({
+            title: "Update",
+            text: msg,
+            icon: "success",
+            timer: 4000,
+          });
+        } else {
+          sweet({
+            title: "Error",
+            text: msg,
+            icon: "error",
+            timer: 4000,
+          });
+        }
+        location.reload();
+        context.dispatch("fetchBoats");
       } catch (e) {
         context.commit("setMsg", "An error has occurred");
       }
@@ -197,6 +251,12 @@ export default createStore({
         const { msg } = await data;
         if (msg) {
           context.commit("setMsg", msg);
+          sweet({
+            title: "Update",
+            text: msg,
+            icon: "success",
+            timer: 4000,
+          });
         }
         context.dispatch("fetchUsers");
       } catch (e) {
@@ -239,7 +299,7 @@ export default createStore({
     },
     //add cart
     addCart(context, boat) {
-      context.commit("addToCart", boat)
+      context.commit("addToCart", boat);
     },
     //fetch cart
     async fetchCart(context) {
@@ -247,9 +307,9 @@ export default createStore({
         const cartdata = JSON.parse(localStorage.getItem("cart"));
         this.$store.commit("setCart", cartdata);
       } catch (e) {
-        context.commit("setMsg", "Error has ocurred")
+        context.commit("setMsg", "Error has ocurred");
       }
-    }
+    },
   },
   modules: {},
 });

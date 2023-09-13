@@ -18,7 +18,7 @@
         aria-hidden="true"
       >
         <div class="modal-dialog">
-          <div class="modal-content bg-dark">
+          <div class="modal-content">
             <div class="modal-header text-center">
               <h1 class="modal-title fs-5" id="exampleModalLabel">
                 Add Boat
@@ -32,23 +32,23 @@
             </div>
             <form>
               <div class="modal-body">
-                <p class="title text-white m-1">Product Name</p>
-                <input type="text" id="title" v-model="newBoat.boatName" />
-                <p class="title text-white m-1">Category</p>
-                <input type="text" v-model="newBoat.Category" />
-                <p class="title text-white m-1">Description</p>
-                <input type="text" v-model="newBoat.boatDesc" />
-                <p class="title text-white m-1">Price</p>
-                <input type="text" v-model="newBoat.amount" />
-                <p class="title text-white m-1">Quantity</p>
-                <input type="text" v-model="newBoat.quantity" />
-                <p class="title text-white m-1">Image Link</p>
-                <input type="text" v-model="newBoat.boatUrl" />
+                <p class="title m-1">Product Name</p>
+                <input type="text" class="w-100 rounded p-1" id="title" v-model="newBoat.boatName" />
+                <p class="title m-1">Category</p>
+                <input type="text" class="w-100 rounded p-1" v-model="newBoat.Category" />
+                <p class="title m-1">Description</p>
+                <input type="text" class="w-100 rounded p-1" v-model="newBoat.boatDesc" />
+                <p class="title m-1">Price</p>
+                <input type="text" class="w-100 rounded p-1" v-model="newBoat.amount" />
+                <p class="title m-1">Quantity</p>
+                <input type="text" class="w-100 rounded p-1" v-model="newBoat.quantity" />
+                <p class="title m-1">Image Link</p>
+                <input type="text" class="w-100 rounded p-1" v-model="newBoat.boatUrl" />
               </div>
               <div class="modal-footer">
                 <button
                   type="button"
-                  class="btn btn-outline-light"
+                  class="btn btn-outline-dark"
                   data-bs-dismiss="modal"
                 >
                   Close
@@ -56,11 +56,11 @@
                 <button
                   @click.prevent="AddBoat"
                   type="submit"
-                  class="btn btn-outline-light"
+                  class="btn btn-outline-dark"
                 >
                   Save changes
                 </button>
-                <button type="reset" class="btn btn-outline-light">
+                <button type="reset" class="btn btn-outline-dark">
                   Clear
                 </button>
               </div>

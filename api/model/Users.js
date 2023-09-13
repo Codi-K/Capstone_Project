@@ -18,7 +18,7 @@ class Users {
   }
   fetchUser(req, res) {
     const query = `
-        SELECT firstName, lastName, emailAdd, userRole, userPass, userProfile
+        SELECT userID, firstName, lastName, userAge, gender, emailAdd, userProfile
         FROM Users
         WHERE userID = ${req.params.id};
         `;
@@ -35,7 +35,7 @@ class Users {
     const { emailAdd, userPass } = req.body;
     // query
     const query = `
-        SELECT  userID, firstName, lastName, userAge, gender, userRole, emailAdd, userPass, userProfile
+        SELECT firstName, lastName, emailAdd, userRole, userPass, userProfile
         FROM Users
         WHERE emailAdd = '${emailAdd}';
         `;

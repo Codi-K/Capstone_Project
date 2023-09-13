@@ -166,12 +166,23 @@ export default createStore({
           `${dataUrl}item/${editedBoat.boatID}`,
           editedBoat
         );
-        context.dispatch("fetchBoats");
         const { msg } = await data;
-        if (msg) {
-          context.commit("setMsg", msg);
-          
-        }
+       if (msg) {
+         context.commit("setMsg", msg);
+         sweet({
+           title: "Update",
+           text: msg,
+           icon: "success",
+           timer: 5000,
+         });
+       } else {
+         sweet({
+           title: "Error",
+           text: msg,
+           icon: "error",
+           timer: 5000,
+         });
+       }
       } catch (e) {
         context.commit("setMsg", "An error has occurred");
       }

@@ -18,7 +18,7 @@ const { cookies } = useCookies();
 export default {
        computed: {
         user() {
-          return this.$store.state.user || cookies.get('ActualUser').result;
+          return cookies.get('ActualUser').result || this.$store.state.user;
           },   
     },
 

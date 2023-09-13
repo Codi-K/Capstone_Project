@@ -3,7 +3,7 @@ const db = require("../config");
 class Boats {
   fetchBoats(req, res) {
     const query = `
-        SELECT boatID, boatName, boatDesc, amount, Category, boatUrl
+        SELECT boatID, boatName, boatDesc, amount, quantity, Category, boatUrl
         FROM Boats;
         `;
     db.query(query, (err, results) => {
@@ -16,7 +16,7 @@ class Boats {
   }
   fetchBoat(req, res) {
     const query = `
-        SELECT boatID, boatName, boatDesc, amount, Category, boatUrl
+        SELECT boatID, boatName, boatDesc, amount, quantity, Category, boatUrl
         FROM Boats
         WHERE boatID = ${req.params.id};
         `;

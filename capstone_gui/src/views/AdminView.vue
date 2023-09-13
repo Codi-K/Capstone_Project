@@ -8,12 +8,12 @@
     <h1><b>Our Boats</b></h1>
 
     <div class="container d-flex justify-content-center my-3">
-      <AddBoatComp/>
+      <AddBoatComp />
     </div>
 
     <!-- table for watches-->
-    <div v-if="boats" class="container-fluid">
-      <table class="table table-bordered border-dark" >
+    <div v-if="boats" class=" container-fluid table-responsive">
+      <table class="table table-bordered border-dark">
         <thead>
           <tr>
             <th scope="col">ID</th>
@@ -35,14 +35,28 @@
             <td>{{ boat.quantity }}</td>
             <td class="text-success">R{{ boat.amount }}</td>
             <td>{{ boat.Category }}</td>
-            <td><img :src="boat.boatUrl"  class="watches_cards_images" :alt="boat.boatName"></td>
-            <td><EditBoatComp :boat="boat"/></td>
-            <td><button type="button" @click="deleteBoat(boat.boatID)" class="btn btn-outline-dark text-danger">Delete</button></td>
+            <td>
+              <img
+                :src="boat.boatUrl"
+                class="watches_cards_images"
+                :alt="boat.boatName"
+              />
+            </td>
+            <td><EditBoatComp :boat="boat" /></td>
+            <td>
+              <button
+                type="button"
+                @click="deleteBoat(boat.boatID)"
+                class="btn btn-outline-dark text-danger"
+              >
+                Delete
+              </button>
+            </td>
           </tr>
         </tbody>
       </table>
     </div>
-    
+
     <!-- spinner -->
     <div v-else class="row justify-content-center gap-3">
       <SpinnerComp />
@@ -57,9 +71,13 @@
 
     <h1 id="headings_in_admin_page"><b>Our Users</b></h1>
 
+    <div class="container d-flex justify-content-center my-3">
+      <AddUserComp />
+    </div>
+
     <!-- table for users-->
-    <div class="container-fluid" v-if="users" >
-      <table class="table table-bordered border-dark">
+    <div class="container-fluid table-responsive" v-if="users">
+      <table class="table table-bordered border-dark ">
         <thead>
           <tr>
             <th scope="col">ID</th>
@@ -83,12 +101,24 @@
             <td>{{ user.gender }}</td>
             <td>{{ user.userRole }}</td>
             <td>{{ user.emailAdd }}</td>
-            <td><img :src="user.userProfile"  class="watches_cards_images" :alt="user.firstName"></td>
-            <td><EditUserComp :user="user"/></td>
-            <td><button type="button" @click="deleteUser(user.userID)" class="btn btn-outline-dark text-danger">Delete</button></td>
+            <td>
+              <img
+                :src="user.userProfile"
+                class="watches_cards_images"
+                :alt="user.firstName"
+              />
+            </td>
+            <td><EditUserComp :user="user" /></td>
+            <td>
+              <button
+                type="button"
+                @click="deleteUser(user.userID)"
+                class="btn btn-outline-dark text-danger"
+              >
+                Delete
+              </button>
+            </td>
           </tr>
-         
-         
         </tbody>
       </table>
     </div>
@@ -101,17 +131,19 @@
 </template>
 
 <script>
-import SpinnerComp from "@/components/SpinnerComp.vue"; 
-import EditBoatComp from '@/components/EditBoatsComp.vue';
+import SpinnerComp from "@/components/SpinnerComp.vue";
+import EditBoatComp from "@/components/EditBoatsComp.vue";
 import EditUserComp from "@/components/EditUserComp.vue";
-import AddBoatComp from '@/components/AddBoatComp.vue'
+import AddBoatComp from "@/components/AddBoatComp.vue";
+import AddUserComp from "@/components/AddUserComp.vue";
 
 export default {
   components: {
     SpinnerComp,
     EditBoatComp,
     EditUserComp,
-    AddBoatComp
+    AddBoatComp,
+    AddUserComp
   },
   computed: {
     boats() {
@@ -123,11 +155,11 @@ export default {
   },
   methods: {
     deleteUser(userID) {
-      this.$store.dispatch("deleteUsers", userID)
-     },
+      this.$store.dispatch("deleteUsers", userID);
+    },
     deleteBoat(boatID) {
-      this.$store.dispatch("deleteBoats", boatID)
-     },
+      this.$store.dispatch("deleteBoats", boatID);
+    },
   },
   mounted() {
     this.$store.dispatch("fetchBoats");

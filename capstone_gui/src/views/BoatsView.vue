@@ -1,19 +1,22 @@
 <template>
   <div>
-    <div class="boats">
-      <div class="d-flex justify-content-center gap-3">
+    <div class="boats ">
+      <div class="d-flex justify-content-center gap-3 ">
         <div class="">
-          <div class="card"  v-for="boat in boats" style="width: 18rem" :key="boat.boatID">
+          <div class="container">
+            <h1 class="text-white">Our Boats</h1>
+          </div>
+          <div class="card border border-light my-2"  v-for="boat in boats" style="width: 16rem" :key="boat.boatID">
             <img :src="boat.boatUrl" class="card-img-top" :alt="boat.boatName" />
             <div class="card-body">
               <h5 class="card-title">{{ boat.boatName }}</h5>
-              <h6 class="card-text text-success">
+              <h5 class="card-text text-success">
                 R{{ boat.amount}}
-              </h6>
-              <p class="card-text">
+              </h5>
+              <p class="card-text opacity-50">
                 {{ boat.Category }}
               </p>
-              <router-link  :to="{name:'single', params:{boatID: boat.boatID}}" class="btn btn-primary">View More</router-link>
+              <router-link  :to="{name:'single', params:{boatID: boat.boatID}}" class="btn btn-outline-dark">View More</router-link>
             </div>
           </div>
         </div>

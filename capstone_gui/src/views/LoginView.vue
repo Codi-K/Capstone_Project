@@ -26,6 +26,9 @@
         Login
       </button>
     </form>
+    <div class="container">
+      <p>To create an account <router-link to="/register" class="btn btn-outline-dark">REGISTER</router-link> </p>
+    </div>
   </div>
 </template>
 

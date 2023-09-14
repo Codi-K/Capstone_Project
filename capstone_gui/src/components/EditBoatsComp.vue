@@ -19,7 +19,7 @@
             <form>
               <div class="modal-body">
                 <p class="title m-1">Boat Name</p>
-                <input type="text" class="w-100 rounded p-1" id="title" v-model="editBoats.boatName" />
+                <input type="text" class="w-100 rounded p-1" v-model="editBoats.boatName" />
                 <p class="title m-1">Category</p>
                 <input type="text" class="w-100 rounded p-1" v-model="editBoats.Category"  />
                 <p class="title m-1">Description</p>

@@ -11,8 +11,6 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  display: grid;
-  grid-template-rows: auto minmax(134vh, 1fr) auto;
 }
 
 /* scrollbar */
@@ -60,36 +58,27 @@
   width: 100%;
   height: 60vh;
 }
-/* .boats{
+.cart{
   background-image: url('https://www.tiarayachts.com/media/wysiwyg/new-home/our-calling-desktop-3.jpg');
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
   width: 100%;
-  height: 134vh;
-} */
-/* .boats{
+  height: 100vh;
+}
+.boats{
   background-image: url('https://cutwaterboats.blob.core.windows.net/media/2325/cutwater-find-dealer-header_2000.jpg');
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
   width: 100%;
-  height: 134vh;
-} */
-.boats{
-  background-image: url('https://cdn-jdcol.nitrocdn.com/VTvbeQICLupbaGSJHoEkZQngBtdfEjmw/assets/images/optimized/rev-5bd9cfa/floeintl.com/dev-wp/wp-content/uploads/2022/05/home-products-bg-1.jpg');
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: center;
-  width: 100%;
-  height: 134vh;
 }
 .about{
   background-image: url('https://i.ibb.co/8rSDnTC/23-R-Z521-R-hero.jpg');
   background-size: cover;
   background-position: center;
   width: 100%;
-  height: 50vh;
+  height: 60vh;
 }
 
 
@@ -158,4 +147,8 @@
 .watches_cards_images {
   border-radius: 0rem;
   height: 6rem;
+}
+.watches_cards_image {
+  border-radius: 0rem;
+  height: 20rem;
 }

@@ -18,9 +18,9 @@
         <h1>WELCOME TO GRANDLINE VESSELS</h1>
       </div>
       <div class="container">
-        <button type="button" class="btn btn-outline-light btn-lg">
+        <router-link to="/boats" type="button" class="btn btn-outline-light btn-lg">
           All Boats
-        </button>
+        </router-link>
       </div>
     </div>
     <div class="container">

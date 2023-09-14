@@ -1,15 +1,17 @@
 <template>
     <div>
-        <div v-for="item in cart" :key="item.cartID">
-            <img :src="item.boatUrl" :alt="item.boatName">
-            <div>
-                <h2>R{{ item.amount }}</h2>
-                <h1>{{ item.boatName }}</h1>
-                <h5>{{ item.Catergory }}</h5>
+        <div class="cart">
+            <div v-for="item in cart" :key="item.cartID">
+                <img :src="item.boatUrl" class="watches_cards_images" :alt="item.boatName">
+                <div>
+                    <h2>R{{ item.amount }}</h2>
+                    <h1>{{ item.boatName }}</h1>
+                    <h5>{{ item.Catergory }}</h5>
+                </div>
             </div>
-        </div>
-        <div>
-            Total Amount : {{ getTotal }}
+            <div>
+              <h3 class="text-white">  Total Amount : {{ getTotal }}</h3>
+            </div>
         </div>
     </div>
 </template>

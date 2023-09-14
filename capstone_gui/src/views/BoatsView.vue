@@ -1,12 +1,12 @@
 <template>
   <div>
-    <div class="boats ">
-      <div class="d-flex justify-content-center gap-3 ">
-        <div class="">
+    <div class="boats">
+      <div class="">
+        <div class="row gap-3 justify-content-center mx-0">
           <div class="container">
             <h1 class="text-white">Our Boats</h1>
           </div>
-          <div class="card border border-light my-2"  v-for="boat in boats" style="width: 16rem" :key="boat.boatID">
+          <div class="card border border-light my-2"  v-for="boat in boats" style="width: 17rem" :key="boat.boatID">
             <img :src="boat.boatUrl" class="card-img-top" :alt="boat.boatName" />
             <div class="card-body">
               <h5 class="card-title">{{ boat.boatName }}</h5>

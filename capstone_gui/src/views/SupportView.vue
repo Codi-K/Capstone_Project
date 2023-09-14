@@ -1,10 +1,9 @@
 <template>
   <div>
     <div class="support"></div>
-    <div class="container my-5">
-      <h1 class="text-white">Support</h1>
+    <div class="container my-3">
+      <h1 class="">Support</h1>
     </div>
-    
 
     <div id="contact_page">
       <div id="get_in_touch">
@@ -14,15 +13,15 @@
           alt="logo"
         />
 
-        <h4 class="my-3">codikader7@gmail.com</h4>
+        <h4 class="my-3">CodiKader@grandline.com</h4>
         <p id="get_in_touch_form_text">
-          Get in touch with us using our email addresse or drop a few words in
+          Get in touch with us using our email address or drop a few words in
           the following form.
         </p>
       </div>
 
       <div id="contact_form">
-         <h2 >Get in touch with us...</h2>
+        <h2>Get in touch with us...</h2>
         <form action="https://formspree.io/f/xnqkdzqw" method="POST">
           <div class="mb-3" id="form_position">
             <label for="exampleInputName" class="form-label">Full Name:</label>
@@ -86,11 +85,11 @@ export default {};
 
 <style scoped>
 input {
-    width: auto;
-  }
-  
-  label {
-    width: 10rem;
-    text-align: left;
-  }
+  width: auto;
+}
+
+label {
+  width: 10rem;
+  text-align: left;
+}
 </style>

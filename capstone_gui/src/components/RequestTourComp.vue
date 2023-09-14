@@ -6,7 +6,7 @@
       data-bs-toggle="modal"
       data-bs-target="#exampleModal"
     >
-      Add New Boat
+      Request Tour
     </button>
     <!-- Modal -->
     <div class="container">
@@ -21,7 +21,7 @@
           <div class="modal-content">
             <div class="modal-header text-center">
               <h1 class="modal-title fs-5" id="exampleModalLabel">
-                Add Boat
+                Tour Request
               </h1>
               <button
                 type="button"
@@ -30,20 +30,17 @@
                 aria-label="Close"
               ></button>
             </div>
-            <form>
+            <form >
               <div class="modal-body">
-                <p class="title m-1">Product Name</p>
-                <input type="text" class="w-100 rounded p-1"  v-model="newBoat.boatName" />
-                <p class="title m-1">Category</p>
-                <input type="text" class="w-100 rounded p-1" v-model="newBoat.Category" />
-                <p class="title m-1">Description</p>
-                <input type="text" class="w-100 rounded p-1" v-model="newBoat.boatDesc" />
-                <p class="title m-1">Price</p>
-                <input type="text" class="w-100 rounded p-1" v-model="newBoat.amount" />
-                <p class="title m-1">Quantity</p>
-                <input type="text" class="w-100 rounded p-1" v-model="newBoat.quantity" />
-                <p class="title m-1">Image Link</p>
-                <input type="text" class="w-100 rounded p-1" v-model="newBoat.boatUrl" />
+                <p class="title m-1">Full Name</p>
+                <input type="text" class="w-100 rounded p-1" placeholder="Full Name..." required />
+                <p class="title m-1">Email Address</p>
+                <input type="text" class="w-100 rounded p-1" placeholder="Email Address..." required />
+                <p class="title m-1">Cell Phone Number</p>
+                <input type="number" class="w-100 rounded p-1" placeholder="Cell Phone Number..." required />
+                <p class="title m-1">Tour Date</p>
+                <input type="date" class="w-100 rounded p-1" placeholder="date..." required />
+                
               </div>
               <div class="modal-footer">
                 <button
@@ -54,7 +51,6 @@
                   Close
                 </button>
                 <button
-                  @click.prevent="AddBoat"
                   type="submit"
                   class="btn btn-outline-dark"
                 >
@@ -74,23 +70,7 @@
 
 <script>
 export default {
-  data() {
-    return {
-      newBoat: {
-        boatName: "",
-        boatDesc: "",
-        quantity: "",
-        amount: "",
-        Category: "",
-        boatUrl: "",
-      },
-    };
-  },
-  methods: {
-    AddBoat() {
-      this.$store.dispatch("addBoats", this.newBoat);
-    },
-  },
+
 };
 </script>
 

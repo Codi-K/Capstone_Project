@@ -43,6 +43,11 @@ const routes = [
     path: "/admin",
     name: "admin",
     component: () => import("../views/AdminView.vue"),
+    beforeEnter() {
+      if (!cookies.get("ActualUser")) {
+        router.push({ name: "login" });
+      }
+    },
   },
   {
     path: "/cart",
@@ -58,6 +63,11 @@ const routes = [
     path: "/profile",
     name: "profile",
     component: () => import("../views/ProfileView.vue"),
+    beforeEnter() {
+      if (!cookies.get("ActualUser")) {
+        router.push({ name: "login" });
+      }
+    },
   },
   {
     path: "/login",
@@ -70,10 +80,15 @@ const routes = [
     component: () => import("../views/RegisterView.vue"),
   },
   {
-    path: "/single",
+    path: "/single/:boatID",
     name: "single",
     props: true,
-    component: () => import("../views/SingleProductView.vue"),
+    component: () => import("../views/SingleView.vue"),
+    beforeEnter() {
+      if (!cookies.get("ActualUser")) {
+        router.push({ name: "login" });
+      }
+    },
   },
 ];
 

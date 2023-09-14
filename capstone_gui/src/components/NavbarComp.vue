@@ -44,13 +44,13 @@
           </ul>
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <router-link class="nav-link text-dark" to="/cart">Cart</router-link>
+              <router-link class="nav-link text-dark" to="/cart"  v-show="userAdmin">Cart</router-link>
             </li>
             <li class="nav-item">
               <router-link class="nav-link text-dark" to="/profile" v-show="userAdmin">Profile</router-link>
             </li>
             <li class="nav-item">
-              <router-link class="nav-link text-dark" @click="logOut" to="/login">Logout</router-link>
+              <router-link class="nav-link text-dark" @click="logOut" to="/login" v-show="userAdmin" >Logout</router-link>
             </li>
           </ul>
         </div>
@@ -77,7 +77,7 @@ export default {
       return this.result?.userRole?.toLowerCase() === "admin"
     },
     userAdmin() {
-      return this.result?.userRole?.toLowerCase() === "user","admin"
+      return this.result?.userRole?.toLowerCase() === "user"|| this.result?.userRole?.toLowerCase() === "admin"
     },
   },
   methods: {

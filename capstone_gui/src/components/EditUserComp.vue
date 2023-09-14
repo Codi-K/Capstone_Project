@@ -34,7 +34,7 @@
             <form>
               <div class="modal-body">
                 <p class="title m-1">Name</p>
-                <input type="text" class="w-100 rounded p-1" id="title" v-model="editUsers.firstName" />
+                <input type="text" class="w-100 rounded p-1"  v-model="editUsers.firstName" />
                 <p class="title m-1">Suranme</p>
                 <input type="text" class="w-100 rounded p-1" v-model="editUsers.lastName" />
                 <p class="title m-1">Age</p>

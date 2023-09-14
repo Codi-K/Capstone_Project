@@ -79,7 +79,6 @@ export default createStore({
         const { msg, token, result } = (
           await axios.post(`${dataUrl}user`, payload)
         ).data;
-        console.log(msg, token, result);
         if (result) {
           context.commit("setUser", { result, msg });
           cookies.set("ActualUser", { msg, token, result });
@@ -103,7 +102,7 @@ export default createStore({
         context.commit("setMsg", "An error has occured");
       }
     },
-    //register 
+    //register
     async addUser(context, payload) {
       try {
         const { msg } = (await axios.post(`${dataUrl}register`, payload)).data;
@@ -275,6 +274,7 @@ export default createStore({
             timer: 4000,
           });
           context.dispatch("fetchBoats");
+          location.reload();
         } else {
           sweet({
             title: "Error",
@@ -292,7 +292,6 @@ export default createStore({
       try {
         const { data } = await axios.get(`${dataUrl}item/${boatID}`);
         context.commit("setBoat", data.result);
-        context.dispatch("fetchBoats");
       } catch (e) {
         context.commit("setMsg", "An error has occurred");
       }

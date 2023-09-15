@@ -2,7 +2,7 @@
   <div>
     <button
       type="button"
-      class="btn btn-outline-dark "
+      class="btn btn-outline-dark animate__animated animate__bounce animate__delay-3s"
       @click="editModal(user.userID)"
       data-bs-toggle="modal"
       :data-bs-target="'#exampleModal' + user.userID"
@@ -61,7 +61,7 @@
                 <button
                   @click.prevent="updateUser(editUsers)"
                   type="submit"
-                  class="btn btn-outline-dark"
+                  class="btn btn-outline-dark animate__animated animate__bounce animate__delay-3s"
                 >
                   Save changes
                 </button>

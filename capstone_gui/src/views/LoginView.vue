@@ -1,8 +1,12 @@
 <template>
-  <div>
-    <form>
+  <div class="login">
+    <div class="container w-75 ">
+      <div class="container p-5 text-white">
+        <h1>LOGIN</h1>
+      </div>
+    <form class="mt-5 p-5 text-white">
       <div class="mb-3">
-        <label for="exampleInputEmail1" class="form-label">Email address</label>
+        <h1 for="exampleInputEmail1" class="form-label">Email address</h1>
         <input
           type="email"
           class="form-control"
@@ -13,7 +17,7 @@
         />
       </div>
       <div class="mb-3">
-        <label for="exampleInputPassword1" class="form-label">Password</label>
+        <h1 for="exampleInputPassword1" class="form-label">Password</h1>
         <input
           type="password"
           class="form-control"
@@ -22,12 +26,13 @@
           required
         />
       </div>
-      <button @click.prevent="login" type="button" class="btn btn-outline-dark">
+      <button @click.prevent="login" type="button" class="btn btn-outline-light btn-lg animate__animated animate__bounce animate__delay-3s">
         Login
       </button>
     </form>
-    <div class="container">
-      <p>To create an account <router-link to="/register" class="btn btn-outline-dark">REGISTER</router-link> </p>
+    <div class="container py-4 text-white">
+      <p>To create an account <router-link to="/register" class="btn btn-outline-light btn-sm animate__animated animate__bounce animate__delay-3s">REGISTER</router-link> </p>
+    </div>
     </div>
   </div>
 </template>

@@ -70,8 +70,8 @@
             />
           </div>
 
-          <button type="button" class="btn btn-outline-dark btn-lg">
-            <span id="flicker_2">Submit</span>
+          <button type="button" class="btn btn-outline-dark btn-lg animate__animated animate__bounce animate__delay-3s">
+            <span>Submit</span>
           </button>
         </form>
       </div>

@@ -2,7 +2,7 @@
   <div>
     <button
       type="button"
-      class="btn btn-outline-dark"
+      class="btn btn-outline-dark animate__animated animate__bounce animate__delay-3s"
       data-bs-toggle="modal"
       data-bs-target="#exampleModald"
     >
@@ -49,7 +49,7 @@
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal">Close</button>
-                <button @click="register" type="button" class="btn btn-outline-dark">Save changes</button>
+                <button @click="register" type="button" class="btn btn-outline-dark animate__animated animate__bounce animate__delay-3s">Save changes</button>
                 <button type="reset" class="btn btn-outline-dark">Clear</button>
               </div>
             </form>

@@ -2,7 +2,7 @@
   <div>
     <button
       type="button"
-      class="btn btn-outline-dark"
+      class="btn btn-outline-dark animate__animated animate__bounce animate__delay-3s"
       data-bs-toggle="modal"
       data-bs-target="#exampleModal"
     >
@@ -56,7 +56,7 @@
                 <button
                   @click.prevent="AddBoat"
                   type="submit"
-                  class="btn btn-outline-dark"
+                  class="btn btn-outline-dark animate__animated animate__bounce animate__delay-3s"
                 >
                   Save changes
                 </button>

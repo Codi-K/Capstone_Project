@@ -47,7 +47,7 @@
               <button
                 type="button"
                 @click="deleteBoat(boat.boatID)"
-                class="btn btn-outline-dark text-danger"
+                class="btn btn-outline-dark text-danger animate__animated animate__bounce animate__delay-3s"
               >
                 Delete
               </button>
@@ -113,7 +113,7 @@
               <button
                 type="button"
                 @click="deleteUser(user.userID)"
-                class="btn btn-outline-dark text-danger"
+                class="btn btn-outline-dark text-danger animate__animated animate__bounce animate__delay-3s"
               >
                 Delete
               </button>

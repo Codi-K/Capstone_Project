@@ -1,6 +1,6 @@
 <template>
   <div>
-    <button type="button" class="btn btn-outline-dark" @click="editModal(boat.boatID)" data-bs-toggle="modal"
+    <button type="button" class="btn btn-outline-dark animate__animated animate__bounce animate__delay-3s" @click="editModal(boat.boatID)" data-bs-toggle="modal"
       :data-bs-target="'#dexampleModal' + boat.boatID">
       Edit
     </button>
@@ -35,7 +35,7 @@
                 <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal">
                   Close
                 </button>
-                <button @click.prevent="updateBoat(boat.boatID)" type="submit" class="btn btn-outline-dark">
+                <button @click.prevent="updateBoat(boat.boatID)" type="submit" class="btn btn-outline-dark animate__animated animate__bounce animate__delay-3s">
                   Save changes
                 </button>
                 <button type="reset" class="btn btn-outline-dark">

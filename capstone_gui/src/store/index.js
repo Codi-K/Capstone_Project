@@ -68,6 +68,7 @@ export default createStore({
     SortPrice(state) {
       state.boats.sort((a, b) => a.amount - b.amount);
     },
+
   },
   actions: {
     // users

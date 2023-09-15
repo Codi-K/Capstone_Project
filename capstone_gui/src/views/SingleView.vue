@@ -5,7 +5,7 @@
         <h1 class="text-white">View More</h1>
       </div>
       <div v-if="boat" class="my-5">
-        <router-link to="/boats" class="btn btn-lg btn-outline-light ms-auto">
+        <router-link to="/boats" class="btn btn-lg btn-outline-dark ms-auto animate__animated animate__bounce animate__delay-2s">
           Go To Boats
         </router-link>
         <div v-for="item in boat" :key="item.boatID" class="d-flex changing ">
@@ -24,7 +24,7 @@
           </div>
         </div>
         <div class="container d-flex justify-content-center gap-3">
-          <button class="btn btn-outline-light" @click.prevent="AddtoCart(boat)">
+          <button class="btn btn-outline-light animate__animated animate__bounce animate__delay-3s" @click.prevent="AddtoCart(boat)">
             Add To Cart
           </button>
           <RequestTourComp />

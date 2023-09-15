@@ -1,8 +1,12 @@
 <template>
-  <div>
-    <form @submit.prevent="register">
-      <div class="mb-3">
-        <label for="exampleInputfirstName1" class="form-label">firstName</label>
+  <div class="register">
+    <div class="container-fluid w-50 p-5 pt-3">
+      <div class="conatiner text-white my-3 mb-5">
+        <h1>Register</h1>
+      </div>
+    <form @submit.prevent="register" >
+      <div class="">
+        <h4 for="exampleInputfirstName1" class="form-label text-white">Name</h4>
         <input
           type="firstName"
           class="form-control"
@@ -12,8 +16,8 @@
           required
         />
       </div>
-      <div class="mb-3">
-        <label for="exampleInputlastName1" class="form-label">lastName</label>
+      <div class="my-3">
+        <h4 for="exampleInputlastName1" class="form-label text-white">Surname</h4>
         <input
           type="lastName"
           class="form-control"
@@ -23,8 +27,8 @@
           required
         />
       </div>
-      <div class="mb-3">
-        <label for="exampleInputuserAge1" class="form-label">userAge</label>
+      <div class="my-3">
+        <h4 for="exampleInputuserAge1" class="form-label text-white">Age</h4>
         <input
           type="userAge"
           class="form-control"
@@ -34,8 +38,8 @@
           required
         />
       </div>
-      <div class="mb-3">
-        <label for="exampleInputgender1" class="form-label">gender</label>
+      <div class="my-3">
+        <h4 for="exampleInputgender1" class="form-label text-white">Gender</h4>
         <input
           type="gender"
           class="form-control"
@@ -46,8 +50,8 @@
         />
       </div>
 
-      <div class="mb-3">
-        <label for="exampleInputEmail1" class="form-label">Email address</label>
+      <div class="my-3">
+        <h4 for="exampleInputEmail1" class="form-label text-white">Email address</h4>
         <input
           type="email"
           class="form-control"
@@ -57,8 +61,8 @@
           required
         />
       </div>
-      <div class="mb-3">
-        <label for="exampleInputPassword1" class="form-label">Password</label>
+      <div class="my-3">
+        <h4 for="exampleInputPassword1" class="form-label text-white">Password</h4>
         <input
           type="password"
           class="form-control"
@@ -67,8 +71,8 @@
           required
         />
       </div>
-      <div class="mb-3">
-        <label for="exampleInputuserProfile1" class="form-label">userProfile</label>
+      <div class="">
+        <h4 for="exampleInputuserProfile1" class="form-label text-white">Image Link</h4>
         <input
           type="userProfile"
           class="form-control"
@@ -77,8 +81,14 @@
           required
         />
       </div>
-      <button type="submit" class="btn btn-outline-dark">Register</button>
+      <button type="submit" class="btn btn-outline-light mt-4 animate__animated animate__bounce animate__delay-3s">Register</button>
     </form>
+    <div>
+      <h6 class="text-white py-4">
+        If you have an account already <router-link to="/login" class="text-decoration-none btn btn-outline-light btn-sm animate__animated animate__bounce animate__delay-3s">LOGIN</router-link>
+      </h6>
+    </div>
+    </div>
   </div>
 </template>
 

@@ -9,7 +9,7 @@
         <a href="https://www.rangerboats.com/" target="_blank">
           <img
             src="https://www.tritonboats.com/content/dam/boating-center/coreaem/logos/ranger-brand.jpg/jcr:content/renditions/cq5dam.web.1920.1920.jpeg"
-            class="logo"
+            class="logo animate__animated animate__bounce animate__delay-3s"
             alt="brands"
           />
         </a>
@@ -18,7 +18,7 @@
         <a href="https://www.trackerboats.com/" target="_blank">
           <img
             src="https://www.ascendkayaks.com/content/dam/boating-center/coreaem/logos/tracker-brand.jpg/jcr:content/renditions/cq5dam.web.1920.1920.jpeg"
-            class="logo"
+            class="logo animate__animated animate__bounce animate__delay-3s"
             alt="brands"
           />
         </a>
@@ -27,7 +27,7 @@
         <a href="https://www.nitro.com/" target="_blank">
           <img
             src="https://www.tritonboats.com/content/dam/boating-center/coreaem/logos/nitro-brand.jpg/jcr:content/renditions/cq5dam.web.1920.1920.jpeg"
-            class="logo"
+            class="logo animate__animated animate__bounce animate__delay-3s"
             alt="brands"
           />
         </a>
@@ -36,7 +36,7 @@
         <a href="https://www.makoboats.com/" target="_blank">
           <img
             src="https://www.tritonboats.com/content/dam/boating-center/coreaem/logos/mako-brand.jpg/jcr:content/renditions/cq5dam.web.1920.1920.jpeg"
-            class="logo"
+            class="logo animate__animated animate__bounce animate__delay-3s"
             alt="brands"
           />
         </a>
@@ -45,7 +45,7 @@
         <a href="https://www.tahoeboats.com/" target="_blank">
           <img
             src="https://www.tritonboats.com/content/dam/boating-center/coreaem/logos/tahoe-brand.jpg/jcr:content/renditions/cq5dam.web.1920.1920.jpeg"
-            class="logo"
+            class="logo animate__animated animate__bounce animate__delay-3s"
             alt="brands"
           />
         </a>
@@ -69,7 +69,7 @@
           <div class="card border-dark" style="width: 18rem">
             <img
               src="https://www.makoboats.com/content/dam/wrmg/mako/2020/inshore-boats/pro-skiff-15-cc/lifestyle/M15Skiff_LS082_18.jpg/jcr:content/renditions/cq5dam.web.2080.2080.jpeg"
-              class="card-img-top"
+              class="card-img-top "
               alt="image"
             />
             <div class="card-body">
@@ -85,7 +85,7 @@
           <div class="card border-dark" style="width: 18rem">
             <img
               src="https://www.makoboats.com/content/dam/wrmg/mako/2020/inshore-boats/pro-skiff-19-top-drive/lifestyle/M19SkiffTD_F112_18.jpg/jcr:content/renditions/cq5dam.web.2080.2080.jpeg"
-              class="card-img-top"
+              class="card-img-top "
               alt="image"
             />
             <div class="card-body">
@@ -101,7 +101,7 @@
           <div class="card border-dark" style="width: 18rem">
             <img
               src="https://www.makoboats.com/content/dam/wrmg/mako/2020/offshore-boats/184-cc/lifestyle/M184_LS036_20V2.jpg/jcr:content/renditions/cq5dam.web.2080.2080.jpeg"
-              class="card-img-top"
+              class="card-img-top "
               alt="image"
             />
             <div class="card-body">

@@ -2,7 +2,7 @@
   <div>
     <button
       type="button"
-      class="btn btn-outline-light"
+      class="btn btn-outline-light animate__animated animate__bounce animate__delay-3s"
       data-bs-toggle="modal"
       data-bs-target="#exampleModal"
     >
@@ -73,7 +73,7 @@
                 >
                   Close
                 </button>
-                <button type="submit" class="btn btn-outline-dark">
+                <button type="submit" class="btn btn-outline-dark animate__animated animate__bounce animate__delay-3s">
                   Submit Request
                 </button>
                 <button type="reset" class="btn btn-outline-dark">Clear</button>

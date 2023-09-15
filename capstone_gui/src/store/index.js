@@ -62,6 +62,12 @@ export default createStore({
     setCart(state, boat) {
       state.cart = boat;
     },
+    SortName(state) {
+      state.boats.sort((a, b) => a.boatName.localeCompare(b.boatName));
+    },
+    SortPrice(state) {
+      state.boats.sort((a, b) => a.amount - b.amount);
+    },
   },
   actions: {
     // users
@@ -307,6 +313,24 @@ export default createStore({
         this.$store.commit("setCart", cartdata);
       } catch (e) {
         context.commit("setMsg", "Error has ocurred");
+      }
+    },
+    //sort by name
+    async fetchName(context) {
+      try {
+        const { data } = await axios.get(`${dataUrl}items`);
+        context.commit("SortName", data.results);
+      } catch (e) {
+        context.commit("setMsg", "An error has occurred");
+      }
+    },
+    //sort by price
+    async fetchPrice(context) {
+      try {
+        const { data } = await axios.get(`${dataUrl}items`);
+        context.commit("SortPrice", data.results);
+      } catch (e) {
+        context.commit("setMsg", "An error has occurred");
       }
     },
   },

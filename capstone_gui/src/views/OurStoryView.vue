@@ -1,10 +1,10 @@
 <template>
   <div>
     <div class="about">
-      <div class="container">
-        <h1>Brand Partners</h1>
+      <div class="container py-5 text-white ">
+        <h1 class="brand">Brand Partners</h1>
       </div>
-          <div class="container d-flex justify-content-center">
+          <div class="container d-flex justify-content-center brand">
       <div class="container">
         <a href="https://www.rangerboats.com/" target="_blank">
           <img
@@ -54,9 +54,9 @@
     </div>
 
     <!-- About Grandline Vessels -->
-    <div class="container-fluid">
+    <div class="container-fluid story">
       <h1>Our Story</h1>
-      <div class="container w-75">
+      <div class="container story">
         <p class="border border-2 border-dark rounded p-5">
           Grandline Vessels is more than a company; it's a passionate maritime
           adventure. With a commitment to excellence, we're a trusted name in
@@ -64,11 +64,11 @@
           standards, is ready to fulfill your maritime dreams. <br />
           Welcome to Grandline Vessels, where the sea meets excellence.
         </p>
-        <div class="d-flex justify-content-center gap-5">
+        <div class="d-flex justify-content-center gap-5 my-2">
           <!-- Mission -->
           <div class="card border-dark" style="width: 18rem">
             <img
-              src="https://www.invincibleboats.com/wp-content/uploads/2021/01/int_footer.jpg"
+              src="https://www.makoboats.com/content/dam/wrmg/mako/2020/inshore-boats/pro-skiff-15-cc/lifestyle/M15Skiff_LS082_18.jpg/jcr:content/renditions/cq5dam.web.2080.2080.jpeg"
               class="card-img-top"
               alt="image"
             />
@@ -84,7 +84,7 @@
           <!-- Vision -->
           <div class="card border-dark" style="width: 18rem">
             <img
-              src="https://www.invincibleboats.com/wp-content/uploads/2021/01/int_footer.jpg"
+              src="https://www.makoboats.com/content/dam/wrmg/mako/2020/inshore-boats/pro-skiff-19-top-drive/lifestyle/M19SkiffTD_F112_18.jpg/jcr:content/renditions/cq5dam.web.2080.2080.jpeg"
               class="card-img-top"
               alt="image"
             />
@@ -100,7 +100,7 @@
           <!-- Values -->
           <div class="card border-dark" style="width: 18rem">
             <img
-              src="https://www.invincibleboats.com/wp-content/uploads/2021/01/int_footer.jpg"
+              src="https://www.makoboats.com/content/dam/wrmg/mako/2020/offshore-boats/184-cc/lifestyle/M184_LS036_20V2.jpg/jcr:content/renditions/cq5dam.web.2080.2080.jpeg"
               class="card-img-top"
               alt="image"
             />
@@ -118,3 +118,23 @@
     </div>
   </div>
 </template>
+
+<style  scoped>
+@media (width< 800px) {
+.brand{
+  flex-direction: column;
+  gap: 1rem;
+  color: black;
+}
+
+.story{
+  margin-top: 5rem;
+}
+
+.about{
+  background-image: none;
+}
+
+}
+
+</style>

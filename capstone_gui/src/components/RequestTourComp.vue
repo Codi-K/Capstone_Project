@@ -2,7 +2,7 @@
   <div>
     <button
       type="button"
-      class="btn btn-outline-dark"
+      class="btn btn-outline-light"
       data-bs-toggle="modal"
       data-bs-target="#exampleModal"
     >
@@ -30,17 +30,40 @@
                 aria-label="Close"
               ></button>
             </div>
-            <form >
+            <form action="https://formspree.io/f/xnqkzdvl" method="POST">
               <div class="modal-body">
                 <p class="title m-1">Full Name</p>
-                <input type="text" class="w-100 rounded p-1" placeholder="Full Name..." required />
+                <input
+                  type="name"
+                  name="name"
+                  class="w-100 rounded p-1"
+                  placeholder="Full Name..."
+                  required
+                />
                 <p class="title m-1">Email Address</p>
-                <input type="text" class="w-100 rounded p-1" placeholder="Email Address..." required />
+                <input
+                  type="email"
+                  name="email"
+                  class="w-100 rounded p-1"
+                  placeholder="Email Address..."
+                  required
+                />
                 <p class="title m-1">Cell Phone Number</p>
-                <input type="number" class="w-100 rounded p-1" placeholder="Cell Phone Number..." required />
+                <input
+                  type="tel"
+                  name="tel"
+                  class="w-100 rounded p-1"
+                  placeholder="Cell Phone Number..."
+                  required
+                />
                 <p class="title m-1">Tour Date</p>
-                <input type="date" class="w-100 rounded p-1" placeholder="date..." required />
-                
+                <input
+                  type="date"
+                  name="date"
+                  class="w-100 rounded p-1"
+                  placeholder="date..."
+                  required
+                />
               </div>
               <div class="modal-footer">
                 <button
@@ -50,15 +73,10 @@
                 >
                   Close
                 </button>
-                <button
-                  type="submit"
-                  class="btn btn-outline-dark"
-                >
-                  Save changes
+                <button type="submit" class="btn btn-outline-dark">
+                  Submit Request
                 </button>
-                <button type="reset" class="btn btn-outline-dark">
-                  Clear
-                </button>
+                <button type="reset" class="btn btn-outline-dark">Clear</button>
               </div>
             </form>
           </div>
@@ -69,9 +87,7 @@
 </template>
 
 <script>
-export default {
-
-};
+export default {};
 </script>
 
 <style scoped></style>

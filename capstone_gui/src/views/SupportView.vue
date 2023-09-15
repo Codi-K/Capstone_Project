@@ -92,4 +92,27 @@ label {
   width: 10rem;
   text-align: left;
 }
+
+@media (width< 1200px) {
+  
+  #contact_page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #get_in_touch {
+    width: 85%;
+    border: 1px solid black;
+  }
+  #form_position {
+    display: flex;
+    flex-direction: column;
+  }
+  #form_contact_input {
+    width: 85%;
+  }
+  #contact_page {
+    margin-bottom: 30rem;
+  }
+}
 </style>

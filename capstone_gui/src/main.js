@@ -6,6 +6,8 @@ import store from './store'
 
 import './assets/css/style.css'
 
+import "animate.css";
+
 import "bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 

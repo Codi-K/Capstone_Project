@@ -89,7 +89,7 @@
   width: 100%;
 }
 .register {
-  background-image: url("https://www.makoboats.com/content/dam/wrmg/mako/files/Redfish_closeupfooter.jpg");
+  background-image: url("../images/pexels-pok-rie-1655177.jpg");
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
@@ -98,7 +98,7 @@
 }
 .login {
   height: 100vh;
-  background-image: url("https://i.postimg.cc/5tQPK2M7/big-yacht-with-boats-sea-summer-greece.jpg");
+  background-image: url("../images/pexels-pok-rie-1655177.jpg");
   background-size: cover;
   background-attachment: fixed;
   background-position: center;

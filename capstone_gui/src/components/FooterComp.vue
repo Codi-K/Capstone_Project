@@ -4,7 +4,7 @@
         <!-- Facebook -->
       <a href="https://www.facebook.com/" target="_blank">
         <img
-          src="https://i.postimg.cc/fTjWnfLt/facebook.png"
+          src="https://i.ibb.co/hVmBm8W/facebook-logo.png"
           class="footerI"
           loading="lazy"
           alt="Facebook"
@@ -13,7 +13,7 @@
       <!-- Twitter -->
       <a href="https://www.twitter.com/" target="_blank">
         <img
-          src="https://i.postimg.cc/WzBWbZ1h/twitter.png"
+          src="https://i.ibb.co/4ZPTCTj/twitter.png"
           class="footerI"
           loading="lazy"
           alt="twitter"

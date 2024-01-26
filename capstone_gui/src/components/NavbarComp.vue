@@ -6,7 +6,7 @@
       <div class="container-fluid p-1">
         <router-link class="navbar-brand" to="/">
           <img
-            src="https://i.postimg.cc/qMdd8W2H/Grand-Line-1.gif"
+            src="https://i.ibb.co/ZN3Gc1x/Grand-Line.gif"
             class="img-fluid logo1"
             alt="Logo"
           />

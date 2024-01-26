@@ -9,7 +9,7 @@
       <div id="get_in_touch">
         <img
           id="contact_us_logo"
-          src="https://i.postimg.cc/qMdd8W2H/Grand-Line-1.gif"
+          src="https://i.ibb.co/ZN3Gc1x/Grand-Line.gif"
           alt="logo"
         />
 
